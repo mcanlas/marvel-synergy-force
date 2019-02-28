@@ -26,12 +26,15 @@ object YamlLoader {
   implicit val characterNameDecoder: Decoder[CharacterName] =
     Decoder.decodeString.map(CharacterName.apply)
 
+  implicit val traitDecoder: Decoder[Trait] =
+    Decoder.decodeString.map(Trait.apply)
+
   YamlLoader
     .fromAs[List[Campaign]]("nodes.yaml") |> println
   YamlLoader.from("roster.yaml") |> println
   YamlLoader.fromAs[String Map List[CharacterName]]("supplies.yaml") |> println
   YamlLoader
-    .from("traits.yaml") |> println
+    .fromAs[String Map List[Trait]]("traits.yaml") |> println
 
   YamlLoader
     .fromAs[List[Int]]("ranks.yaml") |> println
@@ -42,3 +45,5 @@ case class Campaign(name: String, filter: Option[String], chapters: List[List[No
 case class Node(name: String)
 
 case class CharacterName(s: String)
+
+case class Trait(s: String)
