@@ -2,6 +2,11 @@ package com.htmlism.marvelstrikeforce
 
 import mouse.any._
 
+/**
+  * {{{
+  *   sbt "runMain com.htmlism.marvelstrikeforce.StarGrind shield,minion city,hero hand guardians kree aim"
+  * }}}
+  */
 object StarGrind {
   YamlLoader.from("nodes.yaml") |> println
   YamlLoader.from("roster.yaml") |> println
