@@ -8,10 +8,7 @@ import mouse.any._
   * }}}
   */
 object StarGrind {
-  YamlLoader.from("nodes.yaml") |> println
-  YamlLoader.from("roster.yaml") |> println
-  YamlLoader.from("supplies.yaml") |> println
-  YamlLoader.from("traits.yaml") |> println
+  YamlLoader
 
   def main(args: Array[String]): Unit =
     args
