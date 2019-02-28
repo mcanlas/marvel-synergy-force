@@ -32,6 +32,9 @@ object YamlLoader {
   YamlLoader.fromAs[String Map List[CharacterName]]("supplies.yaml") |> println
   YamlLoader
     .from("traits.yaml") |> println
+
+  YamlLoader
+    .fromAs[List[Int]]("ranks.yaml") |> println
 }
 
 case class Campaign(name: String, filter: Option[String], chapters: List[List[Node]])
