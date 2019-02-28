@@ -1,0 +1,240 @@
+- Name: Heroes Assemble
+  Trait: Hero
+  Chapters:
+  - - Name: Heroes 1-1
+      Shards: Elektra
+    - Name: Heroes 1-2
+    - Name: Heroes 1-3
+    - Name: Heroes 1-4
+    - Name: Heroes 1-5
+    - Name: Heroes 1-6
+    - Name: Heroes 1-7
+    - Name: Heroes 1-8
+    - Name: Heroes 1-9
+  - - Name: Heroes 2-1
+    - Name: Heroes 2-2
+    - Name: Heroes 2-3
+    - Name: Heroes 2-4
+    - Name: Heroes 2-5
+    - Name: Heroes 2-6
+    - Name: Heroes 2-7
+    - Name: Heroes 2-8
+    - Name: Heroes 2-9
+  - - Name: Heroes 3-1
+    - Name: Heroes 3-2
+    - Name: Heroes 3-3
+    - Name: Heroes 3-4
+    - Name: Heroes 3-5
+    - Name: Heroes 3-6
+    - Name: Heroes 3-7
+    - Name: Heroes 3-8
+    - Name: Heroes 3-9
+  - - Name: Heroes 4-1
+    - Name: Heroes 4-2
+    - Name: Heroes 4-3
+    - Name: Heroes 4-4
+    - Name: Heroes 4-5
+    - Name: Heroes 4-6
+    - Name: Heroes 4-7
+    - Name: Heroes 4-8
+    - Name: Heroes 4-9
+  - - Name: Heroes 5-1
+    - Name: Heroes 5-2
+    - Name: Heroes 5-3
+    - Name: Heroes 5-4
+    - Name: Heroes 5-5
+    - Name: Heroes 5-6
+    - Name: Heroes 5-7
+    - Name: Heroes 5-8
+    - Name: Heroes 5-9
+  - - Name: Heroes 6-1
+    - Name: Heroes 6-2
+    - Name: Heroes 6-3
+    - Name: Heroes 6-4
+    - Name: Heroes 6-5
+    - Name: Heroes 6-6
+    - Name: Heroes 6-7
+    - Name: Heroes 6-8
+    - Name: Heroes 6-9
+- Name: Villains United
+  Trait: Villain
+  Chapters:
+  - - Name: Villains 1-1
+    - Name: Villains 1-2
+    - Name: Villains 1-3
+    - Name: Villains 1-4
+    - Name: Villains 1-5
+    - Name: Villains 1-6
+    - Name: Villains 1-7
+    - Name: Villains 1-8
+    - Name: Villains 1-9
+  - - Name: Villains 2-1
+    - Name: Villains 2-2
+    - Name: Villains 2-3
+    - Name: Villains 2-4
+    - Name: Villains 2-5
+    - Name: Villains 2-6
+    - Name: Villains 2-7
+    - Name: Villains 2-8
+    - Name: Villains 2-9
+  - - Name: Villains 3-1
+    - Name: Villains 3-2
+    - Name: Villains 3-3
+    - Name: Villains 3-4
+    - Name: Villains 3-5
+    - Name: Villains 3-6
+    - Name: Villains 3-7
+    - Name: Villains 3-8
+    - Name: Villains 3-9
+  - - Name: Villains 4-1
+    - Name: Villains 4-2
+    - Name: Villains 4-3
+    - Name: Villains 4-4
+    - Name: Villains 4-5
+    - Name: Villains 4-6
+    - Name: Villains 4-7
+    - Name: Villains 4-8
+    - Name: Villains 4-9
+  - - Name: Villains 5-1
+    - Name: Villains 5-2
+    - Name: Villains 5-3
+    - Name: Villains 5-4
+    - Name: Villains 5-5
+    - Name: Villains 5-6
+    - Name: Villains 5-7
+    - Name: Villains 5-8
+    - Name: Villains 5-9
+  - - Name: Villains 6-1
+    - Name: Villains 6-2
+    - Name: Villains 6-3
+    - Name: Villains 6-4
+    - Name: Villains 6-5
+    - Name: Villains 6-6
+    - Name: Villains 6-7
+    - Name: Villains 6-8
+    - Name: Villains 6-9
+- Name: The Nexus
+  Chapters:
+  - - Name: Nexus 1-1
+    - Name: Nexus 1-2
+    - Name: Nexus 1-3
+    - Name: Nexus 1-4
+    - Name: Nexus 1-5
+    - Name: Nexus 1-6
+    - Name: Nexus 1-7
+    - Name: Nexus 1-8
+    - Name: Nexus 1-9
+  - - Name: Nexus 2-1
+    - Name: Nexus 2-2
+    - Name: Nexus 2-3
+    - Name: Nexus 2-4
+    - Name: Nexus 2-5
+    - Name: Nexus 2-6
+    - Name: Nexus 2-7
+    - Name: Nexus 2-8
+    - Name: Nexus 2-9
+  - - Name: Nexus 3-1
+    - Name: Nexus 3-2
+    - Name: Nexus 3-3
+    - Name: Nexus 3-4
+    - Name: Nexus 3-5
+    - Name: Nexus 3-6
+    - Name: Nexus 3-7
+    - Name: Nexus 3-8
+    - Name: Nexus 3-9
+  - - Name: Nexus 4-1
+    - Name: Nexus 4-2
+    - Name: Nexus 4-3
+    - Name: Nexus 4-4
+    - Name: Nexus 4-5
+    - Name: Nexus 4-6
+    - Name: Nexus 4-7
+    - Name: Nexus 4-8
+    - Name: Nexus 4-9
+  - - Name: Nexus 5-1
+    - Name: Nexus 5-2
+    - Name: Nexus 5-3
+    - Name: Nexus 5-4
+    - Name: Nexus 5-5
+    - Name: Nexus 5-6
+    - Name: Nexus 5-7
+    - Name: Nexus 5-8
+    - Name: Nexus 5-9
+  - - Name: Nexus 6-1
+    - Name: Nexus 6-2
+    - Name: Nexus 6-3
+    - Name: Nexus 6-4
+    - Name: Nexus 6-5
+    - Name: Nexus 6-6
+    - Name: Nexus 6-7
+    - Name: Nexus 6-8
+    - Name: Nexus 6-9
+  - - Name: Nexus 7-1
+    - Name: Nexus 7-2
+    - Name: Nexus 7-3
+    - Name: Nexus 7-4
+    - Name: Nexus 7-5
+    - Name: Nexus 7-6
+    - Name: Nexus 7-7
+    - Name: Nexus 7-8
+    - Name: Nexus 7-9
+- Name: Cosmic Conflicts
+  Trait: Cosmic
+  Chapters:
+  - - Name: Cosmic 1-1
+    - Name: Cosmic 1-2
+    - Name: Cosmic 1-3
+    - Name: Cosmic 1-4
+    - Name: Cosmic 1-5
+    - Name: Cosmic 1-6
+    - Name: Cosmic 1-7
+    - Name: Cosmic 1-8
+    - Name: Cosmic 1-9
+  - - Name: Cosmic 2-1
+    - Name: Cosmic 2-2
+    - Name: Cosmic 2-3
+    - Name: Cosmic 2-4
+    - Name: Cosmic 2-5
+    - Name: Cosmic 2-6
+    - Name: Cosmic 2-7
+    - Name: Cosmic 2-8
+    - Name: Cosmic 2-9
+  - - Name: Cosmic 3-1
+    - Name: Cosmic 3-2
+    - Name: Cosmic 3-3
+    - Name: Cosmic 3-4
+    - Name: Cosmic 3-5
+    - Name: Cosmic 3-6
+    - Name: Cosmic 3-7
+    - Name: Cosmic 3-8
+    - Name: Cosmic 3-9
+- Name: Mystic Forces Rising
+  Trait: Mystic
+  Chapters:
+  - - Name: Mystic 1-1
+    - Name: Mystic 1-2
+    - Name: Mystic 1-3
+    - Name: Mystic 1-4
+    - Name: Mystic 1-5
+    - Name: Mystic 1-6
+    - Name: Mystic 1-7
+    - Name: Mystic 1-8
+    - Name: Mystic 1-9
+  - - Name: Mystic 2-1
+    - Name: Mystic 2-2
+    - Name: Mystic 2-3
+    - Name: Mystic 2-4
+    - Name: Mystic 2-5
+    - Name: Mystic 2-6
+    - Name: Mystic 2-7
+    - Name: Mystic 2-8
+    - Name: Mystic 2-9
+  - - Name: Mystic 3-1
+    - Name: Mystic 3-2
+    - Name: Mystic 3-3
+    - Name: Mystic 3-4
+    - Name: Mystic 3-5
+    - Name: Mystic 3-6
+    - Name: Mystic 3-7
+    - Name: Mystic 3-8
+    - Name: Mystic 3-9

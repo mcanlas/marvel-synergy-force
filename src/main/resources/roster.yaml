@@ -1,0 +1,20 @@
+- Name: S.H.I.E.L.D. Medic
+  Traits:
+    - <S.H.I.E.L.D. Minion>
+    - Support
+- Name: S.H.I.E.L.D. Trooper
+  Traits:
+    - <S.H.I.E.L.D. Minion>
+    - Blaster
+- Name: S.H.I.E.L.D. Operative
+  Traits:
+    - <S.H.I.E.L.D. Minion>
+    - Support
+- Name: S.H.I.E.L.D. Security
+  Traits:
+    - <S.H.I.E.L.D. Minion>
+    - Protector
+- Name: S.H.I.E.L.D. Assault
+  Traits:
+    - <S.H.I.E.L.D. Minion>
+    - Blaster
