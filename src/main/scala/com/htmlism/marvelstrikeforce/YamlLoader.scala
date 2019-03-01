@@ -29,6 +29,9 @@ object YamlLoader {
   implicit val traitDecoder: Decoder[Trait] =
     Decoder.decodeString.map(Trait.apply)
 
+  implicit val rosterDatumDecoder: Decoder[RosterDatum] =
+    Decoder.forProduct3("Name", "Rank", "Shards")(RosterDatum.apply)
+
   YamlLoader
     .fromAs[List[Campaign]]("nodes.yaml") |> println
   YamlLoader.from("roster.yaml") |> println
@@ -38,6 +41,9 @@ object YamlLoader {
 
   YamlLoader
     .fromAs[List[Int]]("ranks.yaml") |> println
+
+  YamlLoader
+    .fromAs[List[RosterDatum]]("user.yaml") |> println
 }
 
 case class Campaign(name: String, filter: Option[String], chapters: List[List[Node]])
@@ -47,3 +53,5 @@ case class Node(name: String)
 case class CharacterName(s: String)
 
 case class Trait(s: String)
+
+case class RosterDatum(name: CharacterName, rank: Int, shards: Int)
