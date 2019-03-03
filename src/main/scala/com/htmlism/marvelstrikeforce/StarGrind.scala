@@ -9,6 +9,7 @@ import mouse.any._
   */
 object StarGrind {
   YamlLoader
+  new YamlLoader[cats.effect.IO].doIt.unsafeRunSync |> println
 
   def main(args: Array[String]): Unit =
     args

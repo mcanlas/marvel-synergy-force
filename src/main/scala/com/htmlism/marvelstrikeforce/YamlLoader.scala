@@ -1,10 +1,12 @@
 package com.htmlism.marvelstrikeforce
 
+import cats._
+import cats.effect._
 import cats.implicits._
 import io.circe._
 import mouse.any._
 
-object YamlLoader {
+object YamlLoader extends JsonDecoders {
   /**
     * Relaxes circe `ParsingFailure` to `Error` to enable `flatMap` chaining.
     */
@@ -17,6 +19,21 @@ object YamlLoader {
   def fromAs[A](f: String)(implicit decoder: Decoder[A]): Either[Error, A] =
     (f |> from) >>= (_.as[A])
 
+  YamlLoader
+    .fromAs[List[Campaign]]("nodes.yaml") |> println
+  YamlLoader.from("roster.yaml") |> println
+  YamlLoader.fromAs[String Map List[CharacterName]]("supplies.yaml") |> println
+  YamlLoader
+    .fromAs[String Map List[Trait]]("traits.yaml") |> println
+
+  YamlLoader
+    .fromAs[List[Int]]("ranks.yaml") |> println
+
+  YamlLoader
+    .fromAs[List[RosterDatum]]("user.yaml") |> println
+}
+
+trait JsonDecoders {
   implicit val nodeDecoder: Decoder[Node] =
     Decoder.forProduct1("Name")(Node.apply)
 
@@ -31,19 +48,23 @@ object YamlLoader {
 
   implicit val rosterDatumDecoder: Decoder[RosterDatum] =
     Decoder.forProduct3("Name", "Rank", "Shards")(RosterDatum.apply)
+}
 
-  YamlLoader
-    .fromAs[List[Campaign]]("nodes.yaml") |> println
-  YamlLoader.from("roster.yaml") |> println
-  YamlLoader.fromAs[String Map List[CharacterName]]("supplies.yaml") |> println
-  YamlLoader
-    .fromAs[String Map List[Trait]]("traits.yaml") |> println
+class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders {
+  private def stream(f: String): F[java.io.Reader] =
+    F.delay {
+      f |>
+        getClass.getClassLoader.getResourceAsStream |>
+        (new java.io.InputStreamReader(_))
+    }
 
-  YamlLoader
-    .fromAs[List[Int]]("ranks.yaml") |> println
+  private def parse[A](r: java.io.Reader)(implicit dec: Decoder[A]) =
+    (r |> yaml.parser.parse : Either[Error, Json]) >>=
+      (_.as[A])
 
-  YamlLoader
-    .fromAs[List[RosterDatum]]("user.yaml") |> println
+  def doIt =
+    stream("nodes.yaml")
+      .map(parse[List[Campaign]])
 }
 
 case class Campaign(name: String, filter: Option[String], chapters: List[List[Node]])
