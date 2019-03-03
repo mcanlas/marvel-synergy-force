@@ -1,37 +1,9 @@
 package com.htmlism.marvelstrikeforce
 
-import cats._
 import cats.effect._
 import cats.implicits._
 import io.circe._
 import mouse.any._
-
-object YamlLoader extends JsonDecoders {
-  /**
-    * Relaxes circe `ParsingFailure` to `Error` to enable `flatMap` chaining.
-    */
-  def from(f: String): Either[Error, Json] =
-    f |>
-      getClass.getClassLoader.getResourceAsStream |>
-      (new java.io.InputStreamReader(_)) |>
-      io.circe.yaml.parser.parse
-
-  def fromAs[A](f: String)(implicit decoder: Decoder[A]): Either[Error, A] =
-    (f |> from) >>= (_.as[A])
-
-  YamlLoader
-    .fromAs[List[Campaign]]("nodes.yaml") |> println
-  YamlLoader.from("roster.yaml") |> println
-  YamlLoader.fromAs[String Map List[CharacterName]]("supplies.yaml") |> println
-  YamlLoader
-    .fromAs[String Map List[Trait]]("traits.yaml") |> println
-
-  YamlLoader
-    .fromAs[List[Int]]("ranks.yaml") |> println
-
-  YamlLoader
-    .fromAs[List[RosterDatum]]("user.yaml") |> println
-}
 
 trait JsonDecoders {
   implicit val nodeDecoder: Decoder[Node] =
@@ -51,20 +23,41 @@ trait JsonDecoders {
 }
 
 class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders {
+  private def unsafeLoadStream(f: String) =
+    f |>
+      getClass.getClassLoader.getResourceAsStream |>
+      (new java.io.InputStreamReader(_))
+
   private def stream(f: String): F[java.io.Reader] =
     F.delay {
-      f |>
-        getClass.getClassLoader.getResourceAsStream |>
-        (new java.io.InputStreamReader(_))
+      f |> unsafeLoadStream
     }
 
+  /**
+    * Relaxes circe `ParsingFailure` to `Error` to enable `flatMap` chaining.
+    */
   private def parse[A](r: java.io.Reader)(implicit dec: Decoder[A]) =
     (r |> yaml.parser.parse : Either[Error, Json]) >>=
       (_.as[A])
 
-  def doIt =
-    stream("nodes.yaml")
-      .map(parse[List[Campaign]])
+  def loadAs[A : Decoder](f: String): F[Error Either A] =
+    (f |> stream)
+      .map(parse[A])
+
+  def campaigns: F[Either[Error, List[Campaign]]] =
+    loadAs[List[Campaign]]("nodes.yaml")
+
+  def supplies: F[Either[Error, Map[String, List[CharacterName]]]] =
+    loadAs[String Map List[CharacterName]]("supplies.yaml")
+
+  def roster: F[Either[Error, List[RosterDatum]]] =
+    loadAs[List[RosterDatum]]("user.yaml")
+
+  def traits: F[Either[Error, Map[String, List[Trait]]]] =
+    loadAs[String Map List[Trait]]("traits.yaml")
+
+  def ranks: F[Either[Error, List[Int]]] =
+    loadAs[List[Int]]("ranks.yaml")
 }
 
 case class Campaign(name: String, filter: Option[String], chapters: List[List[Node]])

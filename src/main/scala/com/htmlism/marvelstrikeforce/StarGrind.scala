@@ -10,11 +10,9 @@ import mouse.any._
   * }}}
   */
 object StarGrind extends IOApp {
-  YamlLoader
-
   private def yamlTest =
     new YamlLoader[cats.effect.IO]
-      .doIt
+      .roster
       .map(println)
 
   private def mainTest(args: List[String]) =
