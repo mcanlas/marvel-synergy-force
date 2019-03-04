@@ -20,6 +20,9 @@ trait JsonDecoders {
 
   implicit val rosterDatumDecoder: Decoder[RosterDatum] =
     Decoder.forProduct3("Name", "Rank", "Shards")(RosterDatum.apply)
+
+  implicit val shorthandCharacterDecoder: Decoder[ShorthandCharacter] =
+    Decoder.forProduct2("Name", "Traits")(ShorthandCharacter.apply)
 }
 
 class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders {
@@ -58,6 +61,9 @@ class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders {
 
   def ranks: F[Either[Error, List[Int]]] =
     loadAs[List[Int]]("ranks.yaml")
+
+  def characters: F[Either[Error, List[ShorthandCharacter]]] =
+    loadAs[List[ShorthandCharacter]]("characters.yaml")
 }
 
 case class Campaign(name: String, filter: Option[String], chapters: List[List[Node]])
@@ -69,3 +75,5 @@ case class CharacterName(s: String)
 case class Trait(s: String)
 
 case class RosterDatum(name: CharacterName, rank: Int, shards: Int)
+
+case class ShorthandCharacter(name: String, traits: List[Trait])

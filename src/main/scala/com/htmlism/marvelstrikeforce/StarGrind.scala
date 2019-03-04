@@ -10,20 +10,26 @@ import mouse.any._
   * }}}
   */
 object StarGrind extends IOApp {
-  private def yamlTest =
-    new YamlLoader[cats.effect.IO]
-      .roster
-      .map(println)
-
   private def mainTest(args: List[String]) =
     IO {
       args
         .map(Filter.apply) |> println
     }
 
-  def run(args: List[String]): IO[ExitCode] =
-    (yamlTest *> mainTest(args))
+  def run(args: List[String]): IO[ExitCode] = {
+    val io = new YamlLoader[IO]
+
+    val demo =
+      io.campaigns.map(println) *>
+      io.supplies.map(println) *>
+      io.roster.map(println) *>
+      io.traits.map(println) *>
+      io.ranks.map(println) *>
+      io.characters.map(println)
+
+    (demo *> mainTest(args))
       .as(ExitCode.Success)
+  }
 }
 
 object Filter {
