@@ -23,7 +23,7 @@ object StarGrind extends IOApp {
       io.campaigns.map(println) *>
       io.supplies.map(println) *>
       io.roster.map(println) *>
-      io.traits.map(println) *>
+      io.bundles.map(println) *>
       io.ranks.map(println) *>
       io.characters.map(println)
 

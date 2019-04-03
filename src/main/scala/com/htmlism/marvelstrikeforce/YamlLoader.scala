@@ -56,8 +56,8 @@ class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders {
   def roster: F[Either[Error, List[RosterDatum]]] =
     loadAs[List[RosterDatum]]("user.yaml")
 
-  def traits: F[Either[Error, Map[String, List[Trait]]]] =
-    loadAs[String Map List[Trait]]("traits.yaml")
+  def bundles: F[Either[Error, Map[String, List[Trait]]]] =
+    loadAs[String Map List[Trait]]("bundles.yaml")
 
   def ranks: F[Either[Error, List[Int]]] =
     loadAs[List[Int]]("ranks.yaml")
