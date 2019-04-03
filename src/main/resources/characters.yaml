@@ -1,20 +1,25 @@
 - Name: S.H.I.E.L.D. Medic
+  Bundles:
+    - S.H.I.E.L.D. Minion
   Traits:
-    - <S.H.I.E.L.D. Minion>
     - Support
 - Name: S.H.I.E.L.D. Trooper
+  Bundles:
+    - S.H.I.E.L.D. Minion
   Traits:
-    - <S.H.I.E.L.D. Minion>
     - Blaster
 - Name: S.H.I.E.L.D. Operative
+  Bundles:
+    - S.H.I.E.L.D. Minion
   Traits:
-    - <S.H.I.E.L.D. Minion>
     - Support
 - Name: S.H.I.E.L.D. Security
+  Bundles:
+    - S.H.I.E.L.D. Minion
   Traits:
-    - <S.H.I.E.L.D. Minion>
     - Protector
 - Name: S.H.I.E.L.D. Assault
+  Bundles:
+    - S.H.I.E.L.D. Minion
   Traits:
-    - <S.H.I.E.L.D. Minion>
     - Blaster

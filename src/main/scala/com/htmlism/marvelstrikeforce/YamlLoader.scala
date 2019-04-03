@@ -76,4 +76,4 @@ case class Trait(s: String)
 
 case class RosterDatum(name: CharacterName, rank: Int, shards: Int)
 
-case class ShorthandCharacter(name: String, traits: List[Trait])
+case class ShorthandCharacter(name: String, traits: List[Trait], bundles: List[Trait])
