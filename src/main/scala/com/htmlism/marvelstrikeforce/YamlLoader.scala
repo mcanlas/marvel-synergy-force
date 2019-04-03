@@ -22,7 +22,7 @@ trait JsonDecoders {
     Decoder.forProduct3("Name", "Rank", "Shards")(RosterDatum.apply)
 
   implicit val shorthandCharacterDecoder: Decoder[ShorthandCharacter] =
-    Decoder.forProduct2("Name", "Traits")(ShorthandCharacter.apply)
+    Decoder.forProduct3("Name", "Traits", "Bundles")(ShorthandCharacter.apply)
 }
 
 class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders {
