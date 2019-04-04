@@ -1,0 +1,30 @@
+package com.htmlism.marvelstrikeforce
+
+import cats.effect._
+import cats.implicits._
+
+object CharacterOracle {
+  def apply[F[_] : Async]: CharacterOracle[F] =
+    new CharacterOracle[F]
+
+  private def enhanceWith(bundles: Map[String, List[Trait]])(short: ShorthandCharacter): Character = {
+    val expandedTraits =
+      short
+        .bundles
+        .map(_.s)
+        .flatMap(bundles)
+
+    Character(short.name, short.traits ::: expandedTraits)
+  }
+}
+
+class CharacterOracle[F[_] : Async] {
+  def characters: F[List[Character]] = {
+    val loader = new YamlLoader[F]
+
+    for {
+      shorts <- loader.characters
+      bundles <- loader.bundles
+    } yield shorts.map(CharacterOracle.enhanceWith(bundles))
+  }
+}
