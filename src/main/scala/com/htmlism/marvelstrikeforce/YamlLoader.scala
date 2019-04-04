@@ -38,31 +38,34 @@ class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders {
 
   /**
     * Relaxes circe `ParsingFailure` to `Error` to enable `flatMap` chaining.
+    *
+    * First error happens during string to JSON parsing. Second error happens during JSON to case class parsing.
     */
   private def parse[A](r: java.io.Reader)(implicit dec: Decoder[A]) =
     (r |> yaml.parser.parse : Either[Error, Json]) >>=
       (_.as[A])
 
-  def loadAs[A : Decoder](f: String): F[Error Either A] =
+  def loadAs[A : Decoder](f: String): F[A] =
     (f |> stream)
       .map(parse[A])
+      .flatMap(_.fold(F.raiseError[A], F.pure)) // consider json parsing errors irrecoverable
 
-  def campaigns: F[Either[Error, List[Campaign]]] =
+  def campaigns: F[List[Campaign]] =
     loadAs[List[Campaign]]("nodes.yaml")
 
-  def supplies: F[Either[Error, Map[String, List[CharacterName]]]] =
+  def supplies: F[Map[String, List[CharacterName]]] =
     loadAs[String Map List[CharacterName]]("supplies.yaml")
 
-  def roster: F[Either[Error, List[RosterDatum]]] =
+  def roster: F[List[RosterDatum]] =
     loadAs[List[RosterDatum]]("user.yaml")
 
-  def bundles: F[Either[Error, Map[String, List[Trait]]]] =
+  def bundles: F[Map[String, List[Trait]]] =
     loadAs[String Map List[Trait]]("bundles.yaml")
 
-  def ranks: F[Either[Error, List[Int]]] =
+  def ranks: F[List[Int]] =
     loadAs[List[Int]]("ranks.yaml")
 
-  def characters: F[Either[Error, List[ShorthandCharacter]]] =
+  def characters: F[List[ShorthandCharacter]] =
     loadAs[List[ShorthandCharacter]]("characters.yaml")
 }
 
