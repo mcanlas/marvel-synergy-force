@@ -28,3 +28,31 @@
   Traits:
     - Blaster
     - Minion
+- Name: A.I.M. Assaulter
+  Bundles:
+    - A.I.M.
+  Traits:
+    - Tech
+    - Blaster
+    - Minion
+- Name: A.I.M. Infector
+  Bundles:
+    - A.I.M.
+  Traits:
+    - Minion
+- Name: A.I.M. Monstrosity
+  Bundles:
+    - A.I.M.
+  Traits:
+    - Minion
+- Name: A.I.M. Researcher
+  Bundles:
+    - A.I.M.
+  Traits:
+    - Minion
+- Name: A.I.M. Security
+  Bundles:
+    - A.I.M.
+  Traits:
+    - Tech
+    - Minion

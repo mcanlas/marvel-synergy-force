@@ -14,7 +14,7 @@ object CharacterOracle {
         .map(_.s)
         .flatMap(bundles)
 
-    Character(short.name, short.traits ::: expandedTraits)
+    Character(short.name, short.bundles ::: expandedTraits ::: short.traits )
   }
 }
 
