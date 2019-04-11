@@ -6,9 +6,32 @@ Defender:
   - Hero
   - City
 A.I.M.:
+  - A.I.M.
   - Villain
   - Global
 Hand:
   - Villain
+  - City
 Guardian:
   - Cosmic
+  - Hero
+Avenger:
+  - Hero
+Ravager:
+  - Villain
+  - Cosmic
+X-Men:
+  - Hero
+  - Mutant
+X-Force:
+  - Hero
+  - Mutant
+Hydra:
+  - Villain
+Asgardian:
+  - Mystic
+  - Cosmic
+Kree:
+  - Cosmic
+Spider-verse:
+  - City

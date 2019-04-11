@@ -56,3 +56,445 @@
   Traits:
     - Tech
     - Minion
+- Name: Ant-Man
+  Bundles:
+    - Avenger
+  Traits:
+    []
+- Name: Black Panther
+  Bundles:
+    - Avenger
+  Traits:
+    []
+- Name: Black Widow
+  Bundles:
+    - Avenger
+  Traits:
+    - Controller
+- Name: Bullseye
+  Bundles:
+    []
+  Traits:
+    - Villain
+    - Blaster
+    - City
+    - Mercenary
+- Name: Cable
+  Bundles:
+    - X-Force
+  Traits:
+    - Blaster
+- Name: Captain America
+  Bundles:
+    - Avenger
+  Traits:
+    - Protector
+- Name: Captain Marvel
+  Bundles:
+    - Avenger
+  Traits:
+    - Brawler
+    - Kree
+- Name: Carnage
+  Bundles:
+    - Spider-verse
+  Traits:
+    - Villain
+- Name: Crossbones
+  Bundles:
+    - Hydra
+  Traits:
+    - Protector
+- Name: Daredevil
+  Bundles:
+    - Defender
+  Traits:
+    []
+- Name: Deadpool
+  Bundles:
+    - X-Force
+  Traits:
+    - Brawler
+- Name: Doctor Strange
+  Bundles:
+    []
+  Traits:
+    - Hero
+    - Mystic
+    - Cosmic
+    - Support
+- Name: Drax
+  Bundles:
+    - Guardian
+  Traits:
+    - Protector
+- Name: Elektra
+  Bundles:
+    - Hand
+  Traits:
+    - Brawler
+- Name: Gamora
+  Bundles:
+    - Guardian
+  Traits:
+    - Brawler
+- Name: Green Goblin
+  Bundles:
+    - Blaster
+  Traits:
+    - Spider-verse
+    - Villain
+- Name: Groot
+  Bundles:
+    - Guardian
+  Traits:
+    - Support
+- Name: Hand Archer
+  Bundles:
+    - Hand
+  Traits:
+    []
+- Name: Hand Assassin
+  Bundles:
+    - Hand
+  Traits:
+    []
+- Name: Hand Blademaster
+  Bundles:
+    - Hand
+  Traits:
+    []
+- Name: Hand Sentry
+  Bundles:
+    - Hand
+  Traits:
+    []
+- Name: Hand Sorceress
+  Bundles:
+    - Hand
+  Traits:
+    []
+- Name: Hawkeye
+  Bundles:
+    - Avenger
+  Traits:
+    - Controller
+- Name: Hulk
+  Bundles:
+    - Avenger
+  Traits:
+    - Protector
+- Name: Hydra Armored Guard
+  Bundles:
+    - Hydra
+  Traits:
+    []
+- Name: Hydra Grenadier
+  Bundles:
+    - Hydra
+  Traits:
+    []
+- Name: Hydra Rifle Trooper
+  Bundles:
+    - Hydra
+  Traits:
+    []
+- Name: Hydra Scientist
+  Bundles:
+    - Hydra
+  Traits:
+    []
+- Name: Hydra Sniper
+  Bundles:
+    - Hydra
+  Traits:
+    []
+- Name: Iron Fist
+  Bundles:
+    - Defender
+  Traits:
+    []
+- Name: Iron Man
+  Bundles:
+    - Avenger
+  Traits:
+    - Blaster
+- Name: Jessica Jones
+  Bundles:
+    - Defender
+  Traits:
+    []
+- Name: Juggernaut
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Killmonger
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Kingpin
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Korath
+  Bundles:
+    - Kree
+  Traits:
+    []
+- Name: Kree Cyborg
+  Bundles:
+    - Kree
+  Traits:
+    []
+- Name: Kree Noble
+  Bundles:
+    - Kree
+  Traits:
+    []
+- Name: Kree Oracle
+  Bundles:
+    - Kree
+  Traits:
+    []
+- Name: Kree Reaper
+  Bundles:
+    - Kree
+  Traits:
+    []
+- Name: Kree Royal Guard
+  Bundles:
+    - Kree
+  Traits:
+    []
+- Name: Loki
+  Bundles:
+    - Asgardian
+  Traits:
+    - Controller
+- Name: Luke Cage
+  Bundles:
+    - Defender
+  Traits:
+    []
+- Name: M'Baku
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Magneto
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Mantis
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Mercenary Lieutenant
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Mercenary Riot Guard
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Mercenary Sniper
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Mercenary Soldier
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Minn-Erva
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Mordo
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Ms. Marvel
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Mystique
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Nebula
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Nick Fury
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Night Nurse
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Nobu
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Okoye
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Punisher
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Pyro
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Quake
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Ravager Boomer
+  Bundles:
+    - Ravager
+  Traits:
+    []
+- Name: Ravager Bruiser
+  Bundles:
+    - Ravager
+  Traits:
+    []
+- Name: Ravager Stitcher
+  Bundles:
+    - Ravager
+  Traits:
+    []
+- Name: Rocket Raccoon
+  Bundles:
+    - Guardian
+  Traits:
+    - Blaster
+- Name: Ronan
+  Bundles:
+    - Kree
+  Traits:
+    []
+- Name: Sabretooth
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Scarlet Witch
+  Bundles:
+    - Avenger
+  Traits:
+    - Controller
+- Name: Scientist Supreme
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Spider-man
+  Bundles:
+    []
+  Traits:
+    - Spider-verse
+    - Hero
+    - Brawler
+- Name: Spider-man (Miles)
+  Bundles:
+    []
+  Traits:
+    - Spider-verse
+    - Hero
+    - Brawler
+- Name: Star-Lord
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Storm
+  Bundles:
+    - X-Men
+  Traits:
+    - Controller
+- Name: Thanos
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Thor
+  Bundles:
+    - Avenger
+    - Asgardian
+  Traits:
+    - Blaster
+- Name: Ultimus
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Ultron
+  Bundles:
+    []
+  Traits:
+    []
+- Name: Venom
+  Bundles:
+    []
+  Traits:
+    - Villain
+    - Spider-verse
+- Name: Vision
+  Bundles:
+    - Avenger
+  Traits:
+    - Tech
+- Name: War Machine
+  Bundles:
+    - Avenger
+  Traits:
+    - Blaster
+- Name: Wasp
+  Bundles:
+    []
+  Traits:
+    - Hero
+    - Tech
+    - Blaster
+    - Global
+- Name: Winter Soldier
+  Bundles:
+    - Hydra
+  Traits:
+    - Blaster
+- Name: Wolverine
+  Bundles:
+    - X-Men
+  Traits:
+    - Brawler
+- Name: Yondu
+  Bundles:
+    - Ravager
+  Traits:
+    - Support

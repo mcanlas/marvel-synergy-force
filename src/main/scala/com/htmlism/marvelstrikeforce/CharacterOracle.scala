@@ -8,11 +8,13 @@ object CharacterOracle {
     new CharacterOracle[F]
 
   private def enhanceWith(bundles: Map[String, List[Trait]])(short: ShorthandCharacter): Character = {
+    val getExpandedTraits =
+      bundles.withDefaultValue(Nil)
+
     val expandedTraits =
       short
         .bundles
-        .map(_.s)
-        .flatMap(bundles)
+        .map(_.s) >>= getExpandedTraits
 
     Character(short.name, short.bundles ::: expandedTraits ::: short.traits )
   }
