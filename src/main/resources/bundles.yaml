@@ -1,17 +1,16 @@
 S.H.I.E.L.D.:
   - Hero
   - Global
-  - Skill
 Defender:
   - Hero
   - City
 A.I.M.:
-  - A.I.M.
   - Villain
   - Global
 Hand:
   - Villain
   - City
+  - Martial-artist
 Guardian:
   - Cosmic
   - Hero
@@ -23,11 +22,13 @@ Ravager:
 X-Men:
   - Hero
   - Mutant
+  - Global
 X-Force:
   - Hero
   - Mutant
 Hydra:
   - Villain
+  - Global
 Asgardian:
   - Mystic
   - Cosmic
@@ -35,3 +36,16 @@ Kree:
   - Cosmic
 Spider-verse:
   - City
+  - Bio
+Eternal:
+  - Cosmic
+  - Villain
+  - Mystic
+Brotherhood:
+  - Villain
+  - Global
+  - Mutant
+Inhuman:
+  - Hero
+Wakanda:
+  - Global

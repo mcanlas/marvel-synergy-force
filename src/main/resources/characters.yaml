@@ -4,30 +4,35 @@
   Traits:
     - Support
     - Minion
+    - Skill
 - Name: S.H.I.E.L.D. Trooper
   Bundles:
     - S.H.I.E.L.D.
   Traits:
     - Blaster
     - Minion
+    - Skill
 - Name: S.H.I.E.L.D. Operative
   Bundles:
     - S.H.I.E.L.D.
   Traits:
     - Support
     - Minion
+    - Skill
 - Name: S.H.I.E.L.D. Security
   Bundles:
     - S.H.I.E.L.D.
   Traits:
     - Protector
     - Minion
+    - Skill
 - Name: S.H.I.E.L.D. Assault
   Bundles:
     - S.H.I.E.L.D.
   Traits:
     - Blaster
     - Minion
+    - Skill
 - Name: A.I.M. Assaulter
   Bundles:
     - A.I.M.
@@ -40,37 +45,50 @@
     - A.I.M.
   Traits:
     - Minion
+    - Bio
+    - Controller
 - Name: A.I.M. Monstrosity
   Bundles:
     - A.I.M.
   Traits:
     - Minion
+    - Bio
+    - Brawler
 - Name: A.I.M. Researcher
   Bundles:
     - A.I.M.
   Traits:
     - Minion
+    - Support
+    - Skill
 - Name: A.I.M. Security
   Bundles:
     - A.I.M.
   Traits:
     - Tech
     - Minion
+    - Protector
 - Name: Ant-Man
   Bundles:
     - Avenger
   Traits:
-    []
+    - Global
+    - Controller
+    - Tech
 - Name: Black Panther
   Bundles:
     - Avenger
+    - Wakanda
   Traits:
-    []
+    - Mystic
+    - Brawler
 - Name: Black Widow
   Bundles:
     - Avenger
   Traits:
+    - Global
     - Controller
+    - Skill
 - Name: Bullseye
   Bundles:
     []
@@ -79,42 +97,57 @@
     - Blaster
     - City
     - Mercenary
+    - Skill
 - Name: Cable
   Bundles:
     - X-Force
   Traits:
     - Blaster
+    - Cosmic
 - Name: Captain America
   Bundles:
     - Avenger
+    - S.H.I.E.L.D.
   Traits:
     - Protector
+    - Global
+    - Protector
+    - Military
+    - Bio
 - Name: Captain Marvel
   Bundles:
+    - Kree
     - Avenger
   Traits:
     - Brawler
-    - Kree
+    - Bio
+    - Military
 - Name: Carnage
   Bundles:
     - Spider-verse
   Traits:
     - Villain
+    - Brawler
 - Name: Crossbones
   Bundles:
     - Hydra
   Traits:
     - Protector
+    - Tech
 - Name: Daredevil
   Bundles:
     - Defender
   Traits:
-    []
+    - Bio
+    - Brawler
+    - Martial-aritst
 - Name: Deadpool
   Bundles:
     - X-Force
   Traits:
     - Brawler
+    - Mercenary
+    - Global
 - Name: Doctor Strange
   Bundles:
     []
@@ -128,311 +161,417 @@
     - Guardian
   Traits:
     - Protector
+    - Bio
 - Name: Elektra
   Bundles:
     - Hand
   Traits:
     - Brawler
+    - Mystic
 - Name: Gamora
   Bundles:
     - Guardian
   Traits:
     - Brawler
+    - Skill
 - Name: Green Goblin
   Bundles:
     - Blaster
-  Traits:
     - Spider-verse
+  Traits:
     - Villain
 - Name: Groot
   Bundles:
     - Guardian
   Traits:
     - Support
+    - Bio
 - Name: Hand Archer
   Bundles:
     - Hand
   Traits:
-    []
+    - Skill
+    - Blaster
 - Name: Hand Assassin
   Bundles:
     - Hand
   Traits:
-    []
+    - Mystic
+    - Controller
 - Name: Hand Blademaster
   Bundles:
     - Hand
   Traits:
-    []
+    - Skill
+    - Brawler
 - Name: Hand Sentry
   Bundles:
     - Hand
   Traits:
-    []
+    - Mystic
+    - Protector
 - Name: Hand Sorceress
   Bundles:
     - Hand
   Traits:
-    []
+    - Mystic
+    - Support
 - Name: Hawkeye
   Bundles:
     - Avenger
   Traits:
     - Controller
+    - Global
+    - Skill
 - Name: Hulk
   Bundles:
     - Avenger
   Traits:
     - Protector
+    - Global
+    - Bio
 - Name: Hydra Armored Guard
   Bundles:
     - Hydra
   Traits:
-    []
+    - Tech
+    - Protector
 - Name: Hydra Grenadier
   Bundles:
     - Hydra
   Traits:
-    []
+    - Tech
+    - Blaster
 - Name: Hydra Rifle Trooper
   Bundles:
     - Hydra
   Traits:
-    []
+    - Tech
+    - Blaster
 - Name: Hydra Scientist
   Bundles:
     - Hydra
   Traits:
-    []
+    - Skill
+    - Support
 - Name: Hydra Sniper
   Bundles:
     - Hydra
+    - Blaster
   Traits:
-    []
+    - Tech
 - Name: Iron Fist
   Bundles:
     - Defender
   Traits:
-    []
+    - Brawler
+    - Mystic
 - Name: Iron Man
   Bundles:
     - Avenger
   Traits:
     - Blaster
+    - Global
+    - Tech
 - Name: Jessica Jones
   Bundles:
     - Defender
   Traits:
-    []
+    - Bio
+    - Controller
 - Name: Juggernaut
   Bundles:
-    []
+    - Brotherhood
   Traits:
-    []
+    - Protector
 - Name: Killmonger
   Bundles:
-    []
+    - Wakanda
   Traits:
-    []
+    - Villain
+    - Mercenary
+    - Skill
+    - Blaster
 - Name: Kingpin
   Bundles:
     []
   Traits:
-    []
+    - Skill
+    - Protector
+    - Villain
+    - City
 - Name: Korath
   Bundles:
     - Kree
   Traits:
-    []
+    - Villain
+    - Tech
+    - Blaster
 - Name: Kree Cyborg
   Bundles:
     - Kree
   Traits:
-    []
+    - Villain
+    - Minion
+    - Tech
+    - Blaster
 - Name: Kree Noble
   Bundles:
     - Kree
   Traits:
-    []
+    - Villain
+    - Minion
+    - Bio
+    - Support
 - Name: Kree Oracle
   Bundles:
     - Kree
   Traits:
-    []
+    - Tech
+    - Villain
+    - Minion
+    - Support
 - Name: Kree Reaper
   Bundles:
     - Kree
   Traits:
-    []
+    - Bio
+    - Villain
+    - Minion
+    - Brawler
 - Name: Kree Royal Guard
   Bundles:
     - Kree
   Traits:
-    []
+    - Bio
+    - Villain
+    - Minion
+    - Protector
 - Name: Loki
   Bundles:
     - Asgardian
   Traits:
     - Controller
+    - Villain
 - Name: Luke Cage
   Bundles:
     - Defender
   Traits:
-    []
+    - Bio
+    - Protector
 - Name: M'Baku
   Bundles:
-    []
+    - Wakanda
   Traits:
-    []
+    - Protector
+    - Mystic
+    - Hero
 - Name: Magneto
   Bundles:
-    []
+    - Brotherhood
   Traits:
-    []
+    - Controller
 - Name: Mantis
   Bundles:
-    []
+    - Guardian
   Traits:
-    []
+    - Support
+    - Bio
 - Name: Mercenary Lieutenant
   Bundles:
     []
   Traits:
-    []
+    - Mercenary
+    - Villain
+    - Support
+    - City
+    - Tech
 - Name: Mercenary Riot Guard
   Bundles:
     []
   Traits:
-    []
+    - Mercenary
+    - Villain
+    - Protector
+    - City
+    - Skill
 - Name: Mercenary Sniper
   Bundles:
     []
   Traits:
-    []
+    - Mercenary
+    - Villain
+    - Blaster
+    - City
+    - Tech
 - Name: Mercenary Soldier
   Bundles:
     []
   Traits:
-    []
+    - Mercenary
+    - Villain
+    - Blaster
+    - Minion
+    - City
+    - Skill
 - Name: Minn-Erva
   Bundles:
-    []
+    - Kree
   Traits:
-    []
+    - Villain
+    - Support
+    - Tech
 - Name: Mordo
   Bundles:
     []
   Traits:
-    []
+    - Villain
+    - Cosmic
+    - Mystic
+    - Controller
+    - Martial-artist
 - Name: Ms. Marvel
   Bundles:
-    []
+    - Inhuman
   Traits:
-    []
+    - City
+    - Bio
+    - Brawler
 - Name: Mystique
   Bundles:
-    []
+    - Brotherhood
   Traits:
-    []
+    - Controller
 - Name: Nebula
   Bundles:
     []
   Traits:
-    []
+    - Villain
+    - Cosmic
+    - Tech
+    - Brawler
 - Name: Nick Fury
   Bundles:
-    []
+    - S.H.I.E.L.D.
+    - Avenger
   Traits:
-    []
+    - Support
+    - Skill
 - Name: Night Nurse
   Bundles:
     []
   Traits:
-    []
+    - Hero
+    - City
+    - Skill
+    - Support
 - Name: Nobu
   Bundles:
-    []
+    - Hand
   Traits:
-    []
+    - Mystic
+    - Controller
 - Name: Okoye
   Bundles:
-    []
+    - Hero
+    - Wakanda
   Traits:
-    []
+    - Skill
+    - Controller
 - Name: Punisher
   Bundles:
     []
   Traits:
-    []
+    - City
+    - Hero
+    - Skill
+    - Blaster
 - Name: Pyro
   Bundles:
-    []
+    - Brotherhood
   Traits:
-    []
+    - Blaster
 - Name: Quake
   Bundles:
-    []
+    - S.H.I.E.L.D.
+    - Inhuman
   Traits:
-    []
+    - Bio
+    - Controller
 - Name: Ravager Boomer
   Bundles:
     - Ravager
   Traits:
-    []
+    - Tech
+    - Blaster
 - Name: Ravager Bruiser
   Bundles:
     - Ravager
   Traits:
-    []
+    - Bio
+    - Protector
 - Name: Ravager Stitcher
   Bundles:
     - Ravager
   Traits:
-    []
+    - Tech
+    - Support
 - Name: Rocket Raccoon
   Bundles:
     - Guardian
   Traits:
     - Blaster
+    - Tech
 - Name: Ronan
   Bundles:
     - Kree
   Traits:
-    []
+    - Villain
+    - Mystic
+    - Controller
 - Name: Sabretooth
   Bundles:
-    []
+    - Brotherhood
   Traits:
-    []
+    - Brawler
 - Name: Scarlet Witch
   Bundles:
     - Avenger
   Traits:
     - Controller
+    - Mystic
+    - Global
 - Name: Scientist Supreme
   Bundles:
-    []
+    - A.I.M.
   Traits:
-    []
+    - Tech
+    - Support
+- Name: Shuri
+  Bundles:
+    - Wakanda
+  Traits:
+    - Hero
+    - Tech
+    - Support
 - Name: Spider-man
   Bundles:
-    []
-  Traits:
     - Spider-verse
+  Traits:
     - Hero
     - Brawler
 - Name: Spider-man (Miles)
   Bundles:
-    []
-  Traits:
     - Spider-verse
+  Traits:
     - Hero
     - Brawler
 - Name: Star-Lord
   Bundles:
-    []
+    - Guardian
   Traits:
-    []
+    - Tech
+    - Controller
 - Name: Storm
   Bundles:
     - X-Men
@@ -440,9 +579,9 @@
     - Controller
 - Name: Thanos
   Bundles:
-    []
+    - Eternal
   Traits:
-    []
+    - Protector
 - Name: Thor
   Bundles:
     - Avenger
@@ -451,30 +590,39 @@
     - Blaster
 - Name: Ultimus
   Bundles:
-    []
+    - Kree
+    - Eternal
   Traits:
-    []
+    - Brawler
 - Name: Ultron
   Bundles:
     []
   Traits:
-    []
+    - Global
+    - Blaster
+    - Ultron
+    - Tech
+    - Villain
 - Name: Venom
   Bundles:
-    []
-  Traits:
-    - Villain
     - Spider-verse
+  Traits:
+    - Controller
+    - Villain
 - Name: Vision
   Bundles:
     - Avenger
   Traits:
     - Tech
+    - Global
+    - Controller
 - Name: War Machine
   Bundles:
     - Avenger
   Traits:
     - Blaster
+    - Global
+    - Tech
 - Name: Wasp
   Bundles:
     []
@@ -488,6 +636,9 @@
     - Hydra
   Traits:
     - Blaster
+    - Bio
+    - Military
+    - Global
 - Name: Wolverine
   Bundles:
     - X-Men
@@ -498,3 +649,4 @@
     - Ravager
   Traits:
     - Support
+    - Mystic

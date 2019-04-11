@@ -1,0 +1,35 @@
+Allegiance:
+  - Hero
+  - Villain
+Role:
+  - Brawler
+  - Support
+  - Protector
+  - Blaster
+  - Controller
+Origin:
+  - Bio
+  - Skill
+  - Tech
+  - Mutant
+  - Mystic
+Jurisdiction:
+  - City
+  - Asgardian
+  - Cosmic
+  - Global
+Team:
+  - Ravager
+  - X-Men
+  - X-Force
+  - A.I.M.
+  - Hydra
+  - Avenger
+  - Spider-verse
+  - Brotherhood
+  - S.H.I.E.L.D.
+  - Wakanda
+  - Inhuman
+  - Kree
+  - Martial-artist
+  - Hand
