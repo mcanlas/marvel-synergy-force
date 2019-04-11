@@ -45,10 +45,13 @@ class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders {
     (r |> yaml.parser.parse : Either[Error, Json]) >>=
       (_.as[A])
 
+  // consider json parsing errors irrecoverable
+  private def getOrRaise[A](or: Either[Error, A]) =
+    or.fold(F.raiseError[A], F.pure)
+
   def loadAs[A : Decoder](f: String): F[A] =
     (f |> stream)
-      .map(parse[A])
-      .flatMap(_.fold(F.raiseError[A], F.pure)) // consider json parsing errors irrecoverable
+      .map(parse[A]) >>= getOrRaise
 
   def campaigns: F[List[Campaign]] =
     loadAs[List[Campaign]]("nodes.yaml")
