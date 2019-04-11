@@ -7,7 +7,8 @@ package object marvelstrikeforce {
       ys.keys.foreach(k => assert(xs.contains(k)))
 
       xs.keys.toList.map { k =>
-        k -> (xs(k), ys(k))
+        val both = xs(k) -> ys(k)
+        k -> both
       }
         .toMap
     }
