@@ -70,6 +70,9 @@ class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders {
 
   def characters: F[List[ShorthandCharacter]] =
     loadAs[List[ShorthandCharacter]]("characters.yaml")
+
+  def traits: F[String Map List[Trait]] =
+    loadAs[String Map List[Trait]]("traits.yaml")
 }
 
 case class Campaign(name: String, filter: Option[String], chapters: List[List[Node]])
