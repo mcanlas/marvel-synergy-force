@@ -7,7 +7,7 @@ import mouse.any._
 
 trait JsonDecoders {
   implicit val nodeDecoder: Decoder[Node] =
-    Decoder.forProduct1("Name")(Node.apply)
+    Decoder.forProduct2("Name", "Shards")(Node.apply)
 
   implicit val campaignDecoder: Decoder[Campaign] =
     Decoder.forProduct3("Name", "Trait", "Chapters")(Campaign.apply)
@@ -77,7 +77,7 @@ class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders {
 
 case class Campaign(name: String, filter: Option[String], chapters: List[List[Node]])
 
-case class Node(name: String)
+case class Node(name: String, shards: Option[String])
 
 case class CharacterName(s: String)
 
