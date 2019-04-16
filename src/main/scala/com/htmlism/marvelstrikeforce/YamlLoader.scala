@@ -42,14 +42,14 @@ class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders {
     * First error happens during string to JSON parsing. Second error happens during JSON to case class parsing.
     */
   private def parse[A](r: java.io.Reader)(implicit dec: Decoder[A]) =
-    (r |> yaml.parser.parse : Either[Error, Json]) >>=
+    (r |> yaml.parser.parse: Either[Error, Json]) >>=
       (_.as[A])
 
   // consider json parsing errors irrecoverable
   private def getOrRaise[A](or: Either[Error, A]) =
     or.fold(F.raiseError[A], F.pure)
 
-  def loadAs[A : Decoder](f: String): F[A] =
+  def loadAs[A: Decoder](f: String): F[A] =
     (f |> stream)
       .map(parse[A]) >>= getOrRaise
 

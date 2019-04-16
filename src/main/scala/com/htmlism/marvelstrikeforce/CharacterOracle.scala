@@ -4,7 +4,7 @@ import cats.effect._
 import cats.implicits._
 
 object CharacterOracle {
-  def apply[F[_] : Async]: CharacterOracle[F] =
+  def apply[F[_]: Async]: CharacterOracle[F] =
     new CharacterOracle[F]
 
   private def enhanceWith(bundles: Map[String, List[Trait]])(short: ShorthandCharacter): Character = {
@@ -12,20 +12,19 @@ object CharacterOracle {
       bundles.withDefaultValue(Nil)
 
     val expandedTraits =
-      short
-        .bundles
+      short.bundles
         .map(_.s) >>= getExpandedTraits
 
-    Character(short.name, short.bundles ::: expandedTraits ::: short.traits )
+    Character(short.name, short.bundles ::: expandedTraits ::: short.traits)
   }
 }
 
-class CharacterOracle[F[_] : Async] {
+class CharacterOracle[F[_]: Async] {
   def characters: F[List[Character]] = {
     val loader = new YamlLoader[F]
 
     for {
-      shorts <- loader.characters
+      shorts  <- loader.characters
       bundles <- loader.bundles
     } yield shorts.map(CharacterOracle.enhanceWith(bundles))
   }

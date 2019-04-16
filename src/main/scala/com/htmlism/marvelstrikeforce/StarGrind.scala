@@ -21,11 +21,11 @@ object StarGrind extends IOApp {
 
     val demo =
       io.campaigns.map(println) *>
-      io.supplies.map(println) *>
-      io.roster.map(println) *>
-      io.bundles.map(println) *>
-      io.ranks.map(println) *>
-      io.characters.map(println)
+        io.supplies.map(println) *>
+        io.roster.map(println) *>
+        io.bundles.map(println) *>
+        io.ranks.map(println) *>
+        io.characters.map(println)
 
     (demo *> mainTest(args))
       .as(ExitCode.Success)
@@ -34,8 +34,7 @@ object StarGrind extends IOApp {
 
 object Filter {
   def apply(s: String): Filter =
-    s
-      .split(',')
+    s.split(',')
       .toList |> Filter.apply
 }
 

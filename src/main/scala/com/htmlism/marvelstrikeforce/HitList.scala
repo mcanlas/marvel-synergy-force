@@ -9,13 +9,12 @@ object HitList extends IOApp {
     for {
       cs <- CharacterOracle[IO].characters
       ts <- new YamlLoader[IO].traits
-      _ <- IO { cs |> toTable(ts) |> TablePrinter.printTbl }
+      _  <- IO { cs |> toTable(ts) |> TablePrinter.printTbl }
     } yield ExitCode.Success
 
   private def toTable(ts: Map[String, List[Trait]])(xs: List[Character]) = {
     val sortedCharacters =
-      xs
-        .sortBy(_.name)
+      xs.sortBy(_.name)
 
     val names = ("Name" :: sortedCharacters.map(_.name))
       .map(s => Cell(List(s)))
@@ -35,8 +34,7 @@ object HitList extends IOApp {
     val teams =
       narrowTraits("Team", sortedCharacters, ts)
 
-    Table
-      .empty
+    Table.empty
       .addColumn(names)
       .addColumn(allegiance)
       .addColumn(jurisdiction)
