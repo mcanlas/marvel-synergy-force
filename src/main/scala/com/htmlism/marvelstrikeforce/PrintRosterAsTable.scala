@@ -60,6 +60,8 @@ class PrintRosterAsTable[F[_]](implicit F: Async[F]) {
     for {
       cs <- CharacterOracle[F].characters
       ts <- new YamlLoader[F].traits
-      _  <- F.delay { cs |> PrintRosterAsTable.toTable(ts) |> TablePrinter.printTbl }
+      _ <- F.delay {
+        cs |> PrintRosterAsTable.toTable(ts) |> TablePrinter.printTbl
+      }
     } yield ExitCode.Success
 }

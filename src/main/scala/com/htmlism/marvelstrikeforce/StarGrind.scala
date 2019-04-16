@@ -34,8 +34,7 @@ object StarGrind extends IOApp {
 
 object Filter {
   def apply(s: String): Filter =
-    s.split(',')
-      .toList |> Filter.apply
+    s.split(',').toList |> Filter.apply
 }
 
 final case class Filter(xs: List[String])
