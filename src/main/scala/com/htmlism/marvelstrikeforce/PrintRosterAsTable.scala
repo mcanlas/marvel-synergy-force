@@ -4,7 +4,7 @@ import cats.effect._
 import cats.implicits._
 import mouse.any._
 
-object HitList extends IOApp {
+object PrintRosterAsTable extends IOApp {
   def run(args: List[String]): IO[ExitCode] =
     for {
       cs <- CharacterOracle[IO].characters
