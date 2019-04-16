@@ -1,3 +1,5 @@
+scalaVersion := "2.12.8"
+
 // for cats
 scalacOptions += "-Ypartial-unification"
 
