@@ -6,13 +6,9 @@ import mouse.any._
 
 object PrintRosterAsTable extends IOApp {
   def run(args: List[String]): IO[ExitCode] =
-    for {
-      cs <- CharacterOracle[IO].characters
-      ts <- new YamlLoader[IO].traits
-      _  <- IO { cs |> toTable(ts) |> TablePrinter.printTbl }
-    } yield ExitCode.Success
+    new PrintRosterAsTable[IO].program
 
-  private def toTable(ts: Map[String, List[Trait]])(xs: List[Character]) = {
+  def toTable(ts: Map[String, List[Trait]])(xs: List[Character]): Table = {
     val sortedCharacters =
       xs.sortBy(_.name)
 
@@ -57,4 +53,13 @@ object PrintRosterAsTable extends IOApp {
     strings
       .map(s => Cell(List(s)))
   }
+}
+
+class PrintRosterAsTable[F[_]](implicit F: Async[F]) {
+  def program: F[ExitCode] =
+    for {
+      cs <- CharacterOracle[F].characters
+      ts <- new YamlLoader[F].traits
+      _  <- F.delay { cs |> PrintRosterAsTable.toTable(ts) |> TablePrinter.printTbl }
+    } yield ExitCode.Success
 }
