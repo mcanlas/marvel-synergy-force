@@ -36,7 +36,7 @@ object HitList extends IOApp {
       increment(c => containsTrait("Guardian")(c) || containsTrait("Ravager")(c)) |>  // star lord
       increment(c => c.name |> Set("Groot", "Rocket Raccoon")) |>                     // Pairs event
       increment(c => c.name |> Set("Ant-Man", "Wasp")) |>                             // Pairs event
-      increment(c => c.name |> Set("Ms. Marvel", "Scarlet Witch")) // Witch event
+      increment(c => c.name |> Set("Ms. Marvel", "Scarlet Witch"))                    // Witch event
   }
 
   def containsTrait(s: String)(c: Character): Boolean =

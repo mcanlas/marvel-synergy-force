@@ -68,7 +68,7 @@ object TablePrinter {
       (0 until tbl.width)
         .map(tbl.columnWidth)
         .map(_ + 3) // left pad, right pad, side line
-        .sum + 1 // last sideline
+        .sum + 1    // last sideline
 
     println("-" * dashWidth)
 
