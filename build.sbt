@@ -4,4 +4,3 @@ lazy val `marvel-synergy-force` =
     .withCatsEffect
     .withMouse
     .withYaml
-    .withOrganizeImports
