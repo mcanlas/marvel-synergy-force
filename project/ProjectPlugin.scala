@@ -11,7 +11,7 @@ object ProjectPlugin extends AutoPlugin {
   object autoImport {
     implicit class ProjectOps(p: Project) {
       def withCatsEffect: Project =
-        p.settings(libraryDependencies += "org.typelevel" %% "cats-effect" % "3.0.0-M2")
+        p.settings(libraryDependencies += "org.typelevel" %% "cats-effect" % "3.0.0-M4")
 
       def withTesting: Project =
         p.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.2" % "test")
