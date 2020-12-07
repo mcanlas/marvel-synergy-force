@@ -17,10 +17,10 @@ object ProjectPlugin extends AutoPlugin {
         p.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.2" % "test")
 
       def withMouse: Project =
-        p.settings(libraryDependencies += "org.typelevel" %% "mouse"       % "0.25")
+        p.settings(libraryDependencies += "org.typelevel" %% "mouse" % "0.25")
 
       def withYaml: Project =
-        p.settings(libraryDependencies += "io.circe"      %% "circe-yaml"  % "0.12.0")
+        p.settings(libraryDependencies += "io.circe" %% "circe-yaml" % "0.12.0")
 
     }
   }
