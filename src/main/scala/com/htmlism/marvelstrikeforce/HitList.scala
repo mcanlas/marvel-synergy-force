@@ -12,12 +12,11 @@ object HitList extends IOApp {
     xs.map(x => x -> 0).toMap
 
   def increment(f: Character => Boolean)(xs: Map[Character, Int]): Map[Character, Int] =
-    xs.map {
-      case (ch, n) =>
-        if (ch |> f)
-          ch -> (n + 1)
-        else
-          ch -> n
+    xs.map { case (ch, n) =>
+      if (ch |> f)
+        ch -> (n + 1)
+      else
+        ch -> n
     }
 
   def incrementAll(xs: Map[Character, Int]): Map[Character, Int] = {
