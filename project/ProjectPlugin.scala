@@ -20,7 +20,7 @@ object ProjectPlugin extends AutoPlugin {
         p.settings(libraryDependencies += "org.typelevel" %% "mouse" % "0.26")
 
       def withYaml: Project =
-        p.settings(libraryDependencies += "io.circe" %% "circe-yaml" % "0.12.0")
+        p.settings(libraryDependencies += "io.circe" %% "circe-yaml" % "0.14.1")
 
     }
   }
