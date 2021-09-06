@@ -68,15 +68,15 @@ object TablePrinter {
       (0 until tbl.width)
         .map(tbl.columnWidth)
         .map(_ + 3) // left pad, right pad, side line
-        .sum + 1    // last sideline
+        .sum + 1 // last sideline
 
     println("-" * dashWidth)
 
     for (h <- 0 until tbl.height) {
       for (rh <- 0 until tbl.rowHeight(h)) {
         for (w <- 0 until tbl.width) {
-          val cell  = tbl.cellAt(w, h)
-          val line  = cell.line(rh)
+          val cell = tbl.cellAt(w, h)
+          val line = cell.line(rh)
           val width = tbl.columnWidth(w)
 
           print("|")
