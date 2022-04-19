@@ -6,7 +6,8 @@ import mouse.any._
 
 object PrintRosterAsTable extends IOApp {
   def run(args: List[String]): IO[ExitCode] =
-    new PrintRosterAsTable[IO].program
+    new PrintRosterAsTable[IO]
+      .program
       .as(ExitCode.Success)
 
   def toTable(ts: Map[String, List[Trait]])(xs: List[Character]): Table = {
@@ -31,7 +32,8 @@ object PrintRosterAsTable extends IOApp {
     val teams =
       narrowTraits("Team", sortedCharacters, ts)
 
-    Table.empty
+    Table
+      .empty
       .addColumn(names)
       .addColumn(allegiance)
       .addColumn(jurisdiction)

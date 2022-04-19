@@ -20,14 +20,16 @@ case class Table(cells: List[Cell], height: Int, width: Int) {
         height
 
     val cellsWithNewColumn =
-      (0 until newHeight).toList
+      (0 until newHeight)
+        .toList
         .flatMap(h => row(h) :+ col(h))
 
     Table(cellsWithNewColumn, newHeight, newWidth)
   }
 
   def columnWidth(w: Int): Int = {
-    (0 until height).toList
+    (0 until height)
+      .toList
       .map { h =>
         cellAt(w, h)
       }
@@ -36,7 +38,8 @@ case class Table(cells: List[Cell], height: Int, width: Int) {
   }
 
   def rowHeight(h: Int): Int = {
-    (0 until width).toList
+    (0 until width)
+      .toList
       .map { w =>
         cellAt(w, h)
       }

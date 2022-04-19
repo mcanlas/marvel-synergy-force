@@ -6,9 +6,12 @@ package object marvelstrikeforce {
       xs.keys.foreach(k => assert(ys.contains(k)))
       ys.keys.foreach(k => assert(xs.contains(k)))
 
-      xs.keys.toList.map { k =>
-        k -> (xs(k) -> ys(k))
-      }.toMap
+      xs.keys
+        .toList
+        .map { k =>
+          k -> (xs(k) -> ys(k))
+        }
+        .toMap
     }
   }
 }

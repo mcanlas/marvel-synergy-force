@@ -12,7 +12,8 @@ object CharacterOracle {
       bundles.withDefaultValue(Nil)
 
     val expandedTraits =
-      short.bundles
+      short
+        .bundles
         .map(_.s) >>= getExpandedTraits
 
     Character(short.name, short.bundles ::: expandedTraits ::: short.traits)
