@@ -1,7 +1,7 @@
 package com.htmlism.marvelstrikeforce
 
 import cats.effect._
-import cats.implicits._
+import cats.syntax.all._
 import mouse.any._
 
 object HitList extends IOApp {
