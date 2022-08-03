@@ -14,7 +14,7 @@ object ProjectPlugin extends AutoPlugin {
         p.settings(libraryDependencies += "org.typelevel" %% "cats-effect" % "3.3.14")
 
       def withTesting: Project =
-        p.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.12" % "test")
+        p.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.13" % "test")
 
       def withMouse: Project =
         p.settings(libraryDependencies += "org.typelevel" %% "mouse" % "0.26")
