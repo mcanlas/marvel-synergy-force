@@ -14,4 +14,9 @@ package object marvelstrikeforce {
         .toMap
     }
   }
+
+  implicit class IdOps[A](x: A) {
+    def |>[B](f: A => B): B =
+      f(x)
+  }
 }

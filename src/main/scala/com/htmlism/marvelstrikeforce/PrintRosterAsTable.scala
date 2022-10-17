@@ -2,7 +2,6 @@ package com.htmlism.marvelstrikeforce
 
 import cats.effect._
 import cats.syntax.all._
-import mouse.any._
 
 object PrintRosterAsTable extends IOApp {
   def run(args: List[String]): IO[ExitCode] =

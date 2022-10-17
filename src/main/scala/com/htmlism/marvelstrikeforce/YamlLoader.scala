@@ -3,7 +3,6 @@ package com.htmlism.marvelstrikeforce
 import cats.effect._
 import cats.syntax.all._
 import io.circe._
-import mouse.any._
 
 trait JsonDecoders {
   implicit val nodeDecoder: Decoder[Node] =
