@@ -4,7 +4,7 @@ import cats.effect._
 import cats.syntax.all._
 import io.circe._
 
-trait JsonDecoders {
+trait JsonDecoders:
   implicit val nodeDecoder: Decoder[Node] =
     Decoder.forProduct2("Name", "Shards")(Node.apply)
 
@@ -22,9 +22,8 @@ trait JsonDecoders {
 
   implicit val shorthandCharacterDecoder: Decoder[ShorthandCharacter] =
     Decoder.forProduct3("Name", "Traits", "Bundles")(ShorthandCharacter.apply)
-}
 
-class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders {
+class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders:
   private def unsafeLoadStream(f: String) =
     f |>
       getClass.getClassLoader.getResourceAsStream |>
@@ -72,7 +71,6 @@ class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders {
 
   def traits: F[String Map List[Trait]] =
     loadAs[String Map List[Trait]]("traits.yaml")
-}
 
 case class Campaign(name: String, filter: Option[String], chapters: List[List[Node]])
 

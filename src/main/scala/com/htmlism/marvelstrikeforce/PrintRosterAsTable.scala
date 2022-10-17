@@ -3,13 +3,13 @@ package com.htmlism.marvelstrikeforce
 import cats.effect._
 import cats.syntax.all._
 
-object PrintRosterAsTable extends IOApp {
+object PrintRosterAsTable extends IOApp:
   def run(args: List[String]): IO[ExitCode] =
     new PrintRosterAsTable[IO]
       .program
       .as(ExitCode.Success)
 
-  def toTable(ts: Map[String, List[Trait]])(xs: List[Character]): Table = {
+  def toTable(ts: Map[String, List[Trait]])(xs: List[Character]): Table =
     val sortedCharacters =
       xs.sortBy(_.name)
 
@@ -39,9 +39,8 @@ object PrintRosterAsTable extends IOApp {
       .addColumn(origins)
       .addColumn(roles)
       .addColumn(teams)
-  }
 
-  def narrowTraits(s: String, characters: List[Character], traits: String Map List[Trait]): List[Cell] = {
+  def narrowTraits(s: String, characters: List[Character], traits: String Map List[Trait]): List[Cell] =
     val collide = traits(s)
 
     val traitsForCharacters =
@@ -54,13 +53,10 @@ object PrintRosterAsTable extends IOApp {
 
     strings
       .map(s => Cell(List(s)))
-  }
-}
 
-class PrintRosterAsTable[F[_]: Async] {
+class PrintRosterAsTable[F[_]: Async]:
   def program: F[Unit] =
     for {
       cs <- CharacterOracle[F].characters
       ts <- new YamlLoader[F].traits
     } yield cs |> PrintRosterAsTable.toTable(ts) |> TablePrinter.printTbl
-}

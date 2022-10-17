@@ -8,14 +8,14 @@ import cats.syntax.all._
   *   sbt "runMain com.htmlism.marvelstrikeforce.StarGrind shield,minion city,hero hand guardians kree aim"
   * }}}
   */
-object StarGrind extends IOApp {
+object StarGrind extends IOApp:
   private def mainTest(args: List[String]) =
     IO {
       args
         .map(Filter.apply) |> println
     }
 
-  def run(args: List[String]): IO[ExitCode] = {
+  def run(args: List[String]): IO[ExitCode] =
     val io = new YamlLoader[IO]
 
     val demo =
@@ -28,12 +28,9 @@ object StarGrind extends IOApp {
 
     (demo *> mainTest(args))
       .as(ExitCode.Success)
-  }
-}
 
-object Filter {
+object Filter:
   def apply(s: String): Filter =
     s.split(',').toList |> Filter.apply
-}
 
 final case class Filter(xs: List[String])

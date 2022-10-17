@@ -4,10 +4,6 @@ import sbt._
 object ProjectPlugin extends AutoPlugin {
   override def trigger = allRequirements
 
-  override lazy val projectSettings = Seq(
-    scalaVersion := "2.13.8"
-  )
-
   object autoImport {
     implicit class ProjectOps(p: Project) {
       def withCatsEffect: Project =

@@ -3,7 +3,7 @@ package com.htmlism.marvelstrikeforce
 import cats.effect._
 import cats.syntax.all._
 
-object HitList extends IOApp {
+object HitList extends IOApp:
   def run(args: List[String]): IO[ExitCode] =
     new HitList[IO].program
 
@@ -18,7 +18,7 @@ object HitList extends IOApp {
         ch -> n
     }
 
-  def incrementAll(xs: Map[Character, Int]): Map[Character, Int] = {
+  def incrementAll(xs: Map[Character, Int]): Map[Character, Int] =
     xs |>
       increment(containsTrait("Cosmic")) |> // Cosmic campaign
       increment(containsTrait("Mystic")) |> // Mystic campaign
@@ -35,13 +35,11 @@ object HitList extends IOApp {
       increment(c => c.name |> Set("Groot", "Rocket Raccoon")) |> // Pairs event
       increment(c => c.name |> Set("Ant-Man", "Wasp")) |> // Pairs event
       increment(c => c.name |> Set("Ms. Marvel", "Scarlet Witch")) // Witch event
-  }
 
   def containsTrait(s: String)(c: Character): Boolean =
     c.traits.contains(Trait(s))
-}
 
-class HitList[F[_]](implicit F: Async[F]) {
+class HitList[F[_]](implicit F: Async[F]):
   def program: F[ExitCode] =
     for {
       cs <- CharacterOracle[F].characters
@@ -49,4 +47,3 @@ class HitList[F[_]](implicit F: Async[F]) {
         cs |> HitList.asCounts |> HitList.incrementAll |> (_.toList.sortBy(_._2).reverse) |> (_.foreach(println))
       }
     } yield ExitCode.Success
-}

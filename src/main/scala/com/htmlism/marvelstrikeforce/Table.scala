@@ -1,17 +1,16 @@
 package com.htmlism.marvelstrikeforce
 
-object Table {
+object Table:
   val empty: Table = Table(Nil, 0, 0)
-}
 
-case class Table(cells: List[Cell], height: Int, width: Int) {
+case class Table(cells: List[Cell], height: Int, width: Int):
   def cellAt(x: Int, y: Int): Cell =
     cells((y * width) + x)
 
   def row(n: Int): List[Cell] =
     cells.slice(n * width, n * width + width)
 
-  def addColumn(col: List[Cell]): Table = {
+  def addColumn(col: List[Cell]): Table =
     val newWidth = width + 1
     val newHeight =
       if (height == 0)
@@ -25,9 +24,8 @@ case class Table(cells: List[Cell], height: Int, width: Int) {
         .flatMap(h => row(h) :+ col(h))
 
     Table(cellsWithNewColumn, newHeight, newWidth)
-  }
 
-  def columnWidth(w: Int): Int = {
+  def columnWidth(w: Int): Int =
     (0 until height)
       .toList
       .map { h =>
@@ -35,9 +33,8 @@ case class Table(cells: List[Cell], height: Int, width: Int) {
       }
       .map(_.maximumWidth)
       .max
-  }
 
-  def rowHeight(h: Int): Int = {
+  def rowHeight(h: Int): Int =
     (0 until width)
       .toList
       .map { w =>
@@ -45,14 +42,11 @@ case class Table(cells: List[Cell], height: Int, width: Int) {
       }
       .map(_.height)
       .max
-  }
-}
 
-object Cell {
+object Cell:
   val empty: Cell = Cell(Nil)
-}
 
-case class Cell(lines: List[String]) {
+case class Cell(lines: List[String]):
   def maximumWidth: Int =
     lines
       .map(_.length)
@@ -63,10 +57,9 @@ case class Cell(lines: List[String]) {
 
   def line(n: Int): String =
     lines(n)
-}
 
-object TablePrinter {
-  def printTbl(tbl: Table): Unit = {
+object TablePrinter:
+  def printTbl(tbl: Table): Unit =
     val dashWidth =
       (0 until tbl.width)
         .map(tbl.columnWidth)
@@ -75,20 +68,15 @@ object TablePrinter {
 
     println("-" * dashWidth)
 
-    for (h <- 0 until tbl.height) {
-      for (rh <- 0 until tbl.rowHeight(h)) {
-        for (w <- 0 until tbl.width) {
+    for (h <- 0 until tbl.height)
+      for (rh <- 0 until tbl.rowHeight(h))
+        for (w <- 0 until tbl.width)
           val cell = tbl.cellAt(w, h)
           val line = cell.line(rh)
           val width = tbl.columnWidth(w)
 
           print("|")
           printf(s" %-${width}s ", line)
-        }
         println("|")
-      }
 
       println("-" * dashWidth)
-    }
-  }
-}
