@@ -13,7 +13,7 @@ object ProjectPlugin extends AutoPlugin {
         p.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.14" % "test")
 
       def withYaml: Project =
-        p.settings(libraryDependencies += "io.circe" %% "circe-yaml" % "0.14.1")
+        p.settings(libraryDependencies += "io.circe" %% "circe-yaml" % "0.14.2")
 
     }
   }
