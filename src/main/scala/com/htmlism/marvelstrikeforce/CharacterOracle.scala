@@ -23,6 +23,6 @@ class CharacterOracle[F[_]: Async]:
     val loader = new YamlLoader[F]
 
     for {
-      shorts <- loader.characters
+      shorts  <- loader.characters
       bundles <- loader.bundles
     } yield shorts.map(CharacterOracle.enhanceWith(bundles))

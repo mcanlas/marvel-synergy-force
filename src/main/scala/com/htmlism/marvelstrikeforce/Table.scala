@@ -11,7 +11,7 @@ case class Table(cells: List[Cell], height: Int, width: Int):
     cells.slice(n * width, n * width + width)
 
   def addColumn(col: List[Cell]): Table =
-    val newWidth = width + 1
+    val newWidth  = width + 1
     val newHeight =
       if (height == 0)
         col.length
@@ -71,8 +71,8 @@ object TablePrinter:
     for (h <- 0 until tbl.height)
       for (rh <- 0 until tbl.rowHeight(h))
         for (w <- 0 until tbl.width)
-          val cell = tbl.cellAt(w, h)
-          val line = cell.line(rh)
+          val cell  = tbl.cellAt(w, h)
+          val line  = cell.line(rh)
           val width = tbl.columnWidth(w)
 
           print("|")
