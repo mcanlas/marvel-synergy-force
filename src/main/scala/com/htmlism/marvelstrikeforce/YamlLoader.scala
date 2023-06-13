@@ -30,9 +30,8 @@ class YamlLoader[F[_]](implicit F: Async[F]) extends JsonDecoders:
       (new java.io.InputStreamReader(_))
 
   private def stream(f: String): F[java.io.Reader] =
-    F.delay {
+    F.delay:
       f |> unsafeLoadStream
-    }
 
   /**
     * Relaxes circe `ParsingFailure` to `Error` to enable `flatMap` chaining.

@@ -10,10 +10,9 @@ import cats.syntax.all._
   */
 object StarGrind extends IOApp:
   private def mainTest(args: List[String]) =
-    IO {
+    IO:
       args
         .map(Filter.apply) |> println
-    }
 
   def run(args: List[String]): IO[ExitCode] =
     val io = new YamlLoader[IO]
