@@ -1,7 +1,7 @@
 package com.htmlism.marvelstrikeforce
 
-import cats.effect._
-import cats.syntax.all._
+import cats.effect.*
+import cats.syntax.all.*
 
 object HitList extends IOApp:
   def run(args: List[String]): IO[ExitCode] =
@@ -12,10 +12,8 @@ object HitList extends IOApp:
 
   def increment(f: Character => Boolean)(xs: Map[Character, Int]): Map[Character, Int] =
     xs.map { case (ch, n) =>
-      if (ch |> f)
-        ch -> (n + 1)
-      else
-        ch -> n
+      if ch |> f then ch -> (n + 1)
+      else ch            -> n
     }
 
   def incrementAll(xs: Map[Character, Int]): Map[Character, Int] =

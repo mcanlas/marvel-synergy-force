@@ -13,10 +13,8 @@ case class Table(cells: List[Cell], height: Int, width: Int):
   def addColumn(col: List[Cell]): Table =
     val newWidth = width + 1
     val newHeight =
-      if (height == 0)
-        col.length
-      else
-        height
+      if height == 0 then col.length
+      else height
 
     val cellsWithNewColumn =
       (0 until newHeight)
@@ -68,9 +66,9 @@ object TablePrinter:
 
     println("-" * dashWidth)
 
-    for (h <- 0 until tbl.height)
-      for (rh <- 0 until tbl.rowHeight(h))
-        for (w <- 0 until tbl.width)
+    for h <- 0 until tbl.height do
+      for rh <- 0 until tbl.rowHeight(h) do
+        for w <- 0 until tbl.width do
           val cell  = tbl.cellAt(w, h)
           val line  = cell.line(rh)
           val width = tbl.columnWidth(w)

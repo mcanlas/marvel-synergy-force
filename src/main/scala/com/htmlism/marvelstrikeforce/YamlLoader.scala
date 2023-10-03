@@ -1,8 +1,8 @@
 package com.htmlism.marvelstrikeforce
 
-import cats.effect._
-import cats.syntax.all._
-import io.circe._
+import cats.effect.*
+import cats.syntax.all.*
+import io.circe.*
 
 trait JsonDecoders:
   implicit val nodeDecoder: Decoder[Node] =
