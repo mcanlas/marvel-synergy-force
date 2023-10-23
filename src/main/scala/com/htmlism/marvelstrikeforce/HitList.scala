@@ -39,8 +39,8 @@ object HitList extends IOApp:
 
 class HitList[F[_]](implicit F: Async[F]):
   def program: F[ExitCode] =
-    for {
+    for
       cs <- CharacterOracle[F].characters
       _ <- F.delay:
         cs |> HitList.asCounts |> HitList.incrementAll |> (_.toList.sortBy(_._2).reverse) |> (_.foreach(println))
-    } yield ExitCode.Success
+    yield ExitCode.Success

@@ -22,7 +22,7 @@ class CharacterOracle[F[_]: Async]:
   def characters: F[List[Character]] =
     val loader = new YamlLoader[F]
 
-    for {
+    for
       shorts  <- loader.characters
       bundles <- loader.bundles
-    } yield shorts.map(CharacterOracle.enhanceWith(bundles))
+    yield shorts.map(CharacterOracle.enhanceWith(bundles))

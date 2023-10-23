@@ -56,7 +56,7 @@ object PrintRosterAsTable extends IOApp:
 
 class PrintRosterAsTable[F[_]: Async]:
   def program: F[Unit] =
-    for {
+    for
       cs <- CharacterOracle[F].characters
       ts <- new YamlLoader[F].traits
-    } yield cs |> PrintRosterAsTable.toTable(ts) |> TablePrinter.printTbl
+    yield cs |> PrintRosterAsTable.toTable(ts) |> TablePrinter.printTbl
