@@ -1,7 +1,6 @@
 package com.htmlism.marvelstrikeforce
 
 import cats.effect.*
-import cats.syntax.all.*
 
 /**
   * {{{

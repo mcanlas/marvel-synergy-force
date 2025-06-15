@@ -11,7 +11,7 @@ case class Table(cells: List[Cell], height: Int, width: Int):
     cells.slice(n * width, n * width + width)
 
   def addColumn(col: List[Cell]): Table =
-    val newWidth = width + 1
+    val newWidth  = width + 1
     val newHeight =
       if height == 0 then col.length
       else height
@@ -30,7 +30,8 @@ case class Table(cells: List[Cell], height: Int, width: Int):
         cellAt(w, h)
       }
       .map(_.maximumWidth)
-      .max
+      .maxOption
+      .getOrElse(0)
 
   def rowHeight(h: Int): Int =
     (0 until width)
@@ -39,7 +40,8 @@ case class Table(cells: List[Cell], height: Int, width: Int):
         cellAt(w, h)
       }
       .map(_.height)
-      .max
+      .maxOption
+      .getOrElse(0)
 
 object Cell:
   val empty: Cell = Cell(Nil)
@@ -48,7 +50,8 @@ case class Cell(lines: List[String]):
   def maximumWidth: Int =
     lines
       .map(_.length)
-      .max
+      .maxOption
+      .getOrElse(0)
 
   def height: Int =
     lines.length
