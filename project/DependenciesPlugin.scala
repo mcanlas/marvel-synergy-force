@@ -6,6 +6,9 @@ object DependenciesPlugin extends AutoPlugin {
 
   object autoImport {
     implicit class DependencyOps(p: Project) {
+      val circeYamlVersion =
+        "0.16.1"
+
       def withCatsEffect: Project =
         p.settings(libraryDependencies += "org.typelevel" %% "cats-effect" % "3.7.0")
 
@@ -13,7 +16,7 @@ object DependenciesPlugin extends AutoPlugin {
         p.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.20" % "test")
 
       def withYaml: Project =
-        p.settings(libraryDependencies += "io.circe" %% "circe-yaml" % "0.15.1")
+        p.settings(libraryDependencies += "io.circe" %% "circe-yaml" % circeYamlVersion)
     }
   }
 }
