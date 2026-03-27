@@ -10,7 +10,7 @@ object DependenciesPlugin extends AutoPlugin {
         p.settings(libraryDependencies += "org.typelevel" %% "cats-effect" % "3.7.0")
 
       def withTesting: Project =
-        p.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.19" % "test")
+        p.settings(libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.20" % "test")
 
       def withYaml: Project =
         p.settings(libraryDependencies += "io.circe" %% "circe-yaml" % "0.15.1")
